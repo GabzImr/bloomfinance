@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: black;
+}
+
+/* TELA */
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000 45%, #ff007a);
+}
+
+/* FORMAS ROSAS */
+.screen::before {
+  content: "";
+  position: absolute;
+  right: -100px;
+  top: -50px;
+  width: 350px;
+  height: 250px;
+  background: #ff2a8c;
+  border-radius: 60% 40% 70% 30%;
+}
+
+.screen::after {
+  content: "";
+  position: absolute;
+  right: 100px;
+  bottom: -70px;
+  width: 280px;
+  height: 200px;
+  background: #ff2a8c;
+  border-radius: 50% 50% 40% 60%;
+}
+
+/* COLUNAS */
+.left {
+  width: 50%;
+  padding: 100px 80px;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; /* Deixar na esquerda flex-start hahah*/
+  margin-left: 80px; 
+}
+
+.right {
+  width: 50%;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #ff007a, #ff5fa2);
+  border-radius: 12px;
+}
+
+.text h1 {
+  font-size: 55px;
+   font-weight: bold;
+}
+
+.text span {
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+/* TEXTO */
+.desc {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* BOTÕES */
+.buttons {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.btn {
+  width: 450px;
+  padding: 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.enter {
+  background: linear-gradient(90deg, #ff5fa2, #ff2a8c);
+  color: black;
+  font-weight: bold;
+}
+
+.create {
+  background: #2a0020;
+  color: white;
+}
+
+/* SUPORTE */
+.support {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.logo-img {
+  width: 120px;
+  height: 200px;
+  object-fit: contain;
+}
