@@ -59,7 +59,7 @@ body {
   width: 50%;
 }
 
-/* LOGO */
+
 .logo {
   display: flex;
   align-items: center;
@@ -118,7 +118,7 @@ body {
   color: white;
 }
 
-/* SUPORTE */
+
 .support {
   margin-top: 25px;
   font-size: 12px;
@@ -152,4 +152,76 @@ body {
 .title {
   margin-top: 40px;
   font-size: 28px;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+.top {
+  padding: 20px;
+  background: #111;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #ff2a8c;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: gray;
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card input {
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+}
+
+.nome {
+  font-weight: bold;
+}
+
+.valor {
+  font-size: 16px;
 }
