@@ -225,3 +225,93 @@ body {
 .valor {
   font-size: 16px;
 }
+
+
+
+
+
+
+
+nav {
+  display: flex;
+  gap: 30px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+  background: linear-gradient(90deg, #000000, #8d0042);
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-nav {
+  height: 45px;
+}
+
+.top h2 {
+  color: white;
+  font-size: 20px;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav .active {
+  color: white;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+}
+
+.gear {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+
+  background: linear-gradient(
+    to bottom,
+   #ff007a 5%,
+  #99015f 15%,
+  #020202 50%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
