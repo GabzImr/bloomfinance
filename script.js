@@ -29,11 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function atualizar() {
 
     let valores = [];
+    let cores = [];
 
     inputs.forEach(input => {
       let v = Number(input.value);
+      let card = input.closest(".card");
+
       if (!isNaN(v) && v > 0) {
         valores.push(v);
+
+        // 🔥 CORRIGIDO AQUI
+        let cor = card.getAttribute("data-cor");
+        cores.push(cor);
       }
     });
 
@@ -42,20 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     saldo.innerText = "R$ " + restante;
 
-    if (valores.length === 0) {
-      chart.style.background = "#222";
-      return;
-    }
+    let dados = valores.length ? valores : [saldoInicial];
+    let coresFinais = valores.length ? cores : ["#ff2a8c"];
 
-    let soma = valores.reduce((a,b)=>a+b,0);
+    let soma = dados.reduce((a,b)=>a+b,0);
 
     let inicio = 0;
-    let cores = ["#ff2a8c","#7a3cff","#1c4ea3","#0f7a5c","#ff9900"];
     let grad = "";
 
-    (valores.length ? valores : [saldoInicial]).forEach((v,i)=>{
+    dados.forEach((v,i)=>{
       let fatia = (v/soma)*100;
-      grad += `${cores[i]} ${inicio}% ${inicio+fatia}%,`;
+      grad += `${coresFinais[i % coresFinais.length]} ${inicio}% ${inicio+fatia}%`;
+      if (i < dados.length - 1) grad += ",";
       inicio += fatia;
     });
 
@@ -65,5 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   inputs.forEach(input => {
     input.addEventListener("input", atualizar);
   });
-atualizar();
+
+  atualizar();
+
 });
