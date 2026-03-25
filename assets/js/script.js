@@ -1,9 +1,9 @@
 function irLogin() {
-  window.location.href = "login.html";
+  window.location.href = "/assets/pages/login.html";
 }
 
 function irCadastro() {
-  window.location.href = "cadastro.html";
+  window.location.href = "/assets/pages/cadastro.html";
 }
 
 function entrar() {
@@ -12,7 +12,7 @@ function entrar() {
 
  
   if (email === "test123" && senha === "123456") {
-    window.location.href = "dashboard.html";
+    window.location.href = "/assets/pages/dashboard.html";
   } else {
     alert("Login inválido");
   }
