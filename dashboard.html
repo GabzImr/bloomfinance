@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="top">
   
   <div class="left-nav">
@@ -27,7 +28,6 @@
 
 </header>
 
-
 <div class="main">
 
   <div class="grid">
@@ -35,6 +35,9 @@
     <div class="card purple" data-cor="#7a3cff" style="background:#7a3cff;">
       <input class="nome" placeholder="Categoria">
       <input class="valor" type="number" placeholder="Valor">
+      <div class="barra">
+  <div class="fill"></div>
+</div>
     </div>
 
     <div class="card red" data-cor="#ff2a2a" style="background:#7a0000;">
@@ -57,15 +60,33 @@
       <input class="valor" type="number" placeholder="Valor">
     </div>
 
+    <div class="card nova" data-cor="#ff5fa2">
+      <input class="nome" placeholder="Categoria">
+      <input class="valor" type="number" placeholder="Valor">
+    </div>
+
   </div>
 
+  
   <div class="side">
+    
     <div class="chart">
       <div class="center">
         <span>Total</span>
         <strong id="saldo">R$ 0</strong>
       </div>
     </div>
+
+    
+    <button class="add-btn">+ Adicionar</button>
+
+  
+    <div class="form-add" style="display:none;">
+      <input id="novaCategoria" placeholder="Categoria">
+      <input id="novoValor" type="number" placeholder="Valor">
+      <button onclick="adicionar()">Salvar</button>
+    </div>
+
   </div>
 
 </div>
